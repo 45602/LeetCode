@@ -28,5 +28,7 @@ public class LeetCode1503 {
 		}		
 		return time;       
     }
-	
+	public static void main(String[] args) { 
+		System.out.println("S");
+	}
 }
