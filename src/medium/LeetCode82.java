@@ -10,6 +10,7 @@ public class LeetCode82 {
 		ListNode(int val) { 
 			this.val = val; 
 		}
+		
 		ListNode(int val, ListNode next) { 
 			this.val = val; 
 			this.next = next; 
@@ -41,6 +42,7 @@ public class LeetCode82 {
             else {
             	prev = temp;
                 temp = temp.next;
+                
             }
         }
         return head;
