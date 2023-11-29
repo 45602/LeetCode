@@ -1,0 +1,53 @@
+package hard;
+
+public class FirstMissingPositive {
+
+	
+//	Given an unsorted integer array nums, return the smallest missing positive integer.
+//	You must implement an algorithm that runs in O(n) time and uses O(1) auxiliary space.
+//	Input: nums = [3,4,-1,1]
+//	Output: 2
+//	Explanation: 1 is in the array but 2 is missing.
+	
+	public static void main(String[] args) {
+		FirstMissingPositive fmp = new FirstMissingPositive();
+		int[] nums = {3,4,-1,1,7,8,2,0};
+		fmp.firstMissingPositive(nums);
+		
+	}
+	public int firstMissingPositive(int[] nums) {
+		        
+		int i=0;
+		boolean cantFindNumber=false;
+		while(i<nums.length-1) { 
+			
+			if(nums[i] < 1 || nums[i] == i-1) { 
+				i++;
+				continue;
+			}
+			else { 
+				int first = nums[i]; //3
+				if(first<=nums.length-1) {
+					int second = nums[nums[i]-1];
+					int tmp = second;
+					nums[nums[i]-1] = first;
+					nums[i] = second;
+					System
+				}
+				else { 
+					i++;
+					continue;
+				}
+			}
+		}
+		
+		return 0;
+	}
+	public String printNums(int[] nums) { 
+		String s = " ";
+		for(int i=0; i<nums.length; i++) { 
+			s += nums[i];
+		}
+		return s;
+	}
+}
